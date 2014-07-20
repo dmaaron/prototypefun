@@ -36,3 +36,26 @@ Array.prototype.join = function(separator){
     return current_string.slice(0, (current_string.length - 1));
 };
 
+Array.prototype.select = function (fun) {
+    var a = this;
+    var new_array = [];
+    for (var i = 0; i < a.length; i++){
+        if (fun(a[i]) === true){
+            new_array.push(a[i]);
+        }
+    }
+    return new_array;
+};
+
+Array.prototype.reject = function (fun) {
+    var a = this;
+    var new_array = [];
+    for (var i = 0; i < a.length; i++){
+        if (fun(a[i]) === false){
+            new_array.push(a[i]);
+        }
+    }
+    return new_array;
+};
+
+
