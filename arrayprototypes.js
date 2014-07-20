@@ -58,4 +58,20 @@ Array.prototype.reject = function (fun) {
     return new_array;
 };
 
+Array.prototype.sample = function (ran) {
+    var a = this;
+    len = this.length;
+    var new_array = [];
+    if (ran !== undefined) {
+    for (var i = 0; i < ran; i++){
+        var ran_index = a[Math.floor(Math.random()*len)];
+        new_array.push(ran_index);
+        }
+    }
+    else{
+        new_array.push(a[Math.floor(Math.random()*len)]);
+    }
+    return new_array;
+};
+
 
