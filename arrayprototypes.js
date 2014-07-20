@@ -17,3 +17,12 @@ Array.prototype.map = function (fun) {
     }
     return new_array;
 };
+
+Array.prototype.reduce = function (fun) {
+    var a = this;
+    var current_value = 0;
+    for (var i = 0; i < a.length; i++){
+        current_value += fun(a[i]);
+    }
+    return current_value;
+};
