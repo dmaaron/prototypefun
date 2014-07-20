@@ -26,3 +26,13 @@ Array.prototype.reduce = function (fun) {
     }
     return current_value;
 };
+
+Array.prototype.join = function(separator){
+    var a = this;
+    var current_string = "";
+    for (var i = 0; i < a.length; i++){
+        current_string += (a[i] + separator);
+    }
+    return current_string.slice(0, (current_string.length - 1));
+};
+
