@@ -70,8 +70,6 @@ Array.prototype.sample = function (ran) {
         if (indexes.indexOf(ran_index) === -1) {
         indexes.push(ran_index);
         new_array.push(index_value);
-        console.log(indexes);
-        console.log(new_array.length);
         }
     }
 }
