@@ -64,14 +64,14 @@ Array.prototype.sample = function (ran) {
     var indexes = [];
     var new_array = [];
     if (ran !== undefined) {
-    for (var i = 0; i < ran || indexes.length < ran ; i++){
+    for (var i = 0; indexes.length < ran; i++){
         var ran_index = Math.floor(Math.random()*len);
         var index_value = a[ran_index];
         if (indexes.indexOf(ran_index) === -1) {
         indexes.push(ran_index);
         new_array.push(index_value);
         console.log(indexes);
-        console.log(new_array);
+        console.log(new_array.length);
         }
     }
 }
