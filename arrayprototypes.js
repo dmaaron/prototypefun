@@ -60,14 +60,19 @@ Array.prototype.reject = function (fun) {
 
 Array.prototype.sample = function (ran) {
     var a = this;
-    len = this.length;
+    var len = this.length;
+    var indexes = [];
     var new_array = [];
     if (ran !== undefined) {
     for (var i = 0; i < ran; i++){
-        var ran_index = a[Math.floor(Math.random()*len)];
-        new_array.push(ran_index);
+        var ran_index = Math.floor(Math.random()*len);
+        var index_value = a[ran_index];
+        if (indexes.indexOf(index_value) === -1) {
+        indexes.push(ran_index);
+        new_array.push(index_value);
         }
     }
+}
     else{
         new_array.push(a[Math.floor(Math.random()*len)]);
     }
