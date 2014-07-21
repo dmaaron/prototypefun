@@ -64,7 +64,7 @@ Array.prototype.sample = function (ran) {
     var indexes = [];
     var new_array = [];
     if (ran !== undefined) {
-    for (var i = 0; indexes.length < ran; i++){
+    while (indexes.length < ran){
         var ran_index = Math.floor(Math.random()*len);
         var index_value = a[ran_index];
         if (indexes.indexOf(ran_index) === -1) {
