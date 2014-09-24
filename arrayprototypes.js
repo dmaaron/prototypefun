@@ -58,6 +58,21 @@ Array.prototype.reject = function (fun) {
     return new_array;
 };
 
+
+Array.prototype.inject = function (num) {
+    var a = this;
+    var current_value;
+        if (num !== undefined) {
+            current_value = num;
+        } else {
+            current_value = 0;
+        }
+        for (var i=0; i < a.length; i++){
+            current_value += a[i];
+        }
+    return current_value;
+};
+
 Array.prototype.sample = function (ran) {
     var a = this;
     var len = this.length;
