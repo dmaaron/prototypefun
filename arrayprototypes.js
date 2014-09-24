@@ -76,13 +76,13 @@ Array.prototype.inject = function (num) {
 Array.prototype.sample = function (ran) {
     var a = this;
     var len = this.length;
-    var indexes = [];
-    var new_array = [];
+    var indexes = [];       //used to keep track of the indexes from the original array that have already been used
+    var new_array = [];    //our random sample array
     if (ran !== undefined) {
     while (indexes.length < ran){
         var ran_index = Math.floor(Math.random()*len);
         var index_value = a[ran_index];
-        if (indexes.indexOf(ran_index) === -1) {
+        if (indexes.indexOf(ran_index) === -1) {  //if this item in the array hasn't been pushed in yet
         indexes.push(ran_index);
         new_array.push(index_value);
         }
