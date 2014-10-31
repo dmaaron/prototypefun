@@ -40,7 +40,7 @@ Array.prototype.select = function (fun) {
     var a = this;
     var new_array = [];
     for (var i = 0; i < a.length; i++){
-        if (fun(a[i]) === true){
+        if (fun(a[i])){
             new_array.push(a[i]);
         }
     }
